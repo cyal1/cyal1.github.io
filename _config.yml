@@ -4,7 +4,7 @@ email: 6115119@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   Cyan's Blog
 baseurl: "" # the subpath of your site, e.g. if value is '/blog', Home is pages.github.io/blog/
-url: "http://cyal1.github.io" # the base hostname & protocol for your site
+url: "https://cyal1.github.io" # the base hostname & protocol for your site
 twitter_username: cyan
 github_username: cyan
 background_color: '#fff'
