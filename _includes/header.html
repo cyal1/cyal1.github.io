@@ -1,0 +1,24 @@
+<div class="site-header">
+
+  <nav class="site-nav">
+    <a href="#" class="menu-icon">
+      <i class="fa fa-navicon fa-lg"></i>
+    </a>
+
+    <div class="trigger">
+      <ui>
+        {% for link in site.social-links %}
+        <span style="padding:0;margin:0">
+          <a style="padding:0;margin:0" href="{{link.url}}" target="_blank">
+            <i style="color:black;font-size:28px;" onmouseover="style.color ='{{ link.color }}'" onmouseout="style.color ='black'"
+              class="{{ link.icon }}"></i>
+          </a>
+        </span>
+        {% endfor %}
+        <!-- End Social Media -->
+      </ui>
+    </div>
+  </nav>
+
+
+</div>

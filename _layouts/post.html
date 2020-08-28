@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<!-- prettier-ignore -->
+
+<div class="post">
+
+  <header class="post-header">
+
+    <!-- Nav -->
+    <a href="{{site.url}}">
+      <i style="color:#000" class="fas fa-home"></i>
+      <br><br>
+
+
+    </a>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} •
+      {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <br>
+
+    <span>
+      {% for tag in page.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code>&nbsp;</a>
+      {% endfor %}
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    {{ content }}
+  </article>
+
+  <br>
+  <div style="color: gray;font-style: normal; font-size: small">
+    Found a mistake or typo in this post? &nbsp;
+    <a style=" color: #222222; font-style: normal;font-weight: 900;"
+      href="https://github.com/cyal1/cyal1.github.io/edit/master/{{ page.path }}">Suggest edit</a>
+    <br>
+    Questions/Comments?
+    <a style=" color: #222222 ; font-style:normal; font-weight: 900;" href="http://wpa.qq.com/msgrd?v=3&uin=6115119&site=qq&menu=yes" target="_blank">Let me know
+      on
+      &nbsp;<i style="color:#54b5ef" class=" fab fa-qq"></i> </a>
+  </div>
+
+  <div align="center">
+    <a href="#">
+    <i class="fa fa-arrow-circle-up fa-2x"></i>
+    </a>
+  </div>
+
+</div>
