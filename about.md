@@ -8,7 +8,7 @@ redirect_from:
 
 Hi - I'm **Cyan**.
 
-📍 I live in Shanghai, China and work at [chaitin](https://www.chaitin.cn/) on the Pentesting Team.
+📍 I live in Shanghai, China and work at [🔐](https://www.qq.cn/) on the Pentesting Team.
 
 🎓 Graduated from XX University.
 
