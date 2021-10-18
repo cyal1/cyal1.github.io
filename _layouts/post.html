@@ -19,8 +19,6 @@ layout: default
     <p class="post-meta">Posted on {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} •
       {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     {% if page.lastUpdate %}<p class="post-meta" style="display:block;margin-top:-15px;">Last modified on {{ page.lastUpdate | date: "%b %-d, %Y" }}</p>{% endif %}
-    <br>
-
     <span>
       {% for tag in page.tags %}
       {% capture tag_name %}{{ tag }}{% endcapture %}
