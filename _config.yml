@@ -59,6 +59,7 @@ redcarpet:
   extensions: ["tables", "autolink", "strikethrough", "space_after_headers", "fenced_code_blocks"]
 plugins:
   - jekyll-redirect-from
+  - jekyll-minifier
 sass:
     style: compressed
-layout: compress
+# layout: compress
