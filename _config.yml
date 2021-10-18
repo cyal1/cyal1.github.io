@@ -49,7 +49,7 @@ social-links:
     color: "#c24a3a"
     external: true
   - name: RSS
-    url: https://localhost/feed.xml
+    url: https://blog.c9.is/feed.xml
     icon: fas fa-rss
     color: "#ee802f"
     external: true
