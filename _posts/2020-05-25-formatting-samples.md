@@ -2,7 +2,6 @@
 layout: post
 title: "Formatting Samples"
 date: 2020-05-25
-categories:
 favorite: "true"
 tags: mobile-dev react-native
 ---

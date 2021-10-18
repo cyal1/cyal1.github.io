@@ -20,6 +20,7 @@ tag_dir = 'tag/'
 filenames = glob.glob(post_dir + '*md')
 
 total_tags = []
+print(filenames)
 for filename in filenames:
     f = open(filename, 'r', encoding='utf8')
     crawl = False
@@ -39,7 +40,10 @@ for filename in filenames:
     f.close()
 total_tags = set(total_tags)
 
+# print(total_tags)
+
 old_tags = glob.glob(tag_dir + '*.md')
+# print(old_tags)
 for tag in old_tags:
     os.remove(tag)
 
