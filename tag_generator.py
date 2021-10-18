@@ -19,6 +19,7 @@ tag_dir = 'tag/'
 
 filenames = glob.glob(post_dir + '*md')
 
+
 total_tags = []
 print(filenames)
 for filename in filenames:
