@@ -61,4 +61,4 @@ plugins:
   - jekyll-redirect-from
 sass:
     style: compressed
-# layout: compress
+layout: compress
