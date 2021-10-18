@@ -4,6 +4,7 @@ title: "Formatting Samples"
 date: 2020-05-25
 favorite: "true"
 tags: mobile-dev react-native
+lastUpdate: 2021-10-18
 ---
 
 Arctic Fox supports GFM!
