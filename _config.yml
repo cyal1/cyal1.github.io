@@ -1,12 +1,12 @@
 # Site settings
-title: Cyan's Blog
+title: Cyal1's Blog
 email: 6115119@qq.com
 description: > # this means to ignore newlines until "baseurl:"
   Cyal1's Blog
 baseurl: "" # the subpath of your site, e.g. if value is '/blog', Home is pages.github.io/blog/
 url: "https://blog.c9.is" # the base hostname & protocol for your site
-twitter_username: cyan
-github_username: cyan
+twitter_username: @user_cyan
+github_username: cyal1
 background_color: '#fff'
 text_color: '#454545'
 link_color: '#00B2EE'
