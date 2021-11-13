@@ -3,7 +3,7 @@ layout: post
 title: "One-liner CheatSheet"
 date: 2021-10-18
 favorite: "true"
-lastUpdate: 2021-10-18
+lastUpdate: 2021-11-13
 ---
 
 ##### find subdomain by certfications
@@ -15,8 +15,14 @@ curl https://crt.sh/\?q\=%.jd.com\&output\=json |jq '.[].name_value' |sed 's/"//
 ##### find spring-boot
 
 ```shell
-cat urls.txt|httpx -H "User-Agent: ${UA}" -paths '/env,/actuator/env' -title -status-code -content-length -content-type -follow-redirects -match-string "java.runtime.name"
+cat urls.txt|httpx -paths '/env,/actuator/env' -title -status-code -content-length -content-type -follow-redirects -match-string "java.runtime.name"
 
-cat urls.txt|httpx -H "User-Agent: ${UA}" -paths '/actuator/mappings,/mappings' -title -status-code -content-length -content-type -follow-redirects -match-string "dispatcherServlet"
+cat urls.txt|httpx -paths '/actuator/mappings,/mappings' -title -status-code -content-length -content-type -follow-redirects -match-string "dispatcherServlet"
+```
+
+##### find swagger-ui
+
+```bash
+cat urls.txt|httpx  -paths '/api/docs/,/swagger-resources,/v2/api-docs/,/api/swagger/index.yaml,/swagger/index.yaml' -title -status-code -content-length -content-type -follow-redirects -match-regex "\"swagger-ui\"|swaggerVersion|\"swagger\":|swagger:"
 ```
 
