@@ -15,14 +15,24 @@ curl https://crt.sh/\?q\=%.jd.com\&output\=json |jq '.[].name_value' |sed 's/"//
 ##### find spring-boot
 
 ```shell
-cat urls.txt|httpx -paths '/env,/actuator/env' -title -status-code -content-length -content-type -follow-redirects -match-string "java.runtime.name"
+cat urls.txt|httpx -no-fallback -paths '/env,/actuator/env' -title -status-code -content-length -content-type -follow-redirects -match-string "java.runtime.name"
 
-cat urls.txt|httpx -paths '/actuator/mappings,/mappings' -title -status-code -content-length -content-type -follow-redirects -match-string "dispatcherServlet"
+cat urls.txt|httpx -no-fallback -paths '/actuator/mappings,/mappings' -title -status-code -content-length -content-type -follow-redirects -match-string "dispatcherServlet"
 ```
 
 ##### find swagger-ui
 
 ```bash
-cat urls.txt|httpx  -paths '/api/docs/,/swagger-resources,/v2/api-docs/,/api/swagger/index.yaml,/swagger/index.yaml' -title -status-code -content-length -content-type -follow-redirects -match-regex "\"swagger-ui\"|swaggerVersion|\"swagger\":|swagger:"
+cat urls.txt|httpx -no-fallback -paths '/api/docs/,/swagger-resources,/v2/api-docs/,/api/swagger/index.yaml,/swagger/index.yaml' -title -status-code -content-length -content-type -follow-redirects -match-regex "\"swagger-ui\"|swaggerVersion|\"swagger\":|swagger:"
 ```
+
+##### find shiro
+
+```shell
+cat urls.txt | httpx -no-fallback -H "Cookie: rememberMe=123" -match-string "rememberMe=deleteMe"
+```
+
+##### wordlists
+
+https://wordlists.assetnote.io/
 
