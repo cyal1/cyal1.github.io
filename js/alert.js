@@ -1,1 +1,1 @@
-alert(1);
+window.alert(1);
