@@ -1,2 +1,1 @@
-document.write("123");
-window.alert(1);
+eval('alert(1)');
