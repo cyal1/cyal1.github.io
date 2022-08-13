@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Something Outlandish"
+title: "Some New Frontiers"
 date: 2022-01-05
 favorite: "true"
 lastUpdate: 2022-01-05
