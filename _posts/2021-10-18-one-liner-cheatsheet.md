@@ -3,8 +3,13 @@ layout: post
 title: "One-liner CheatSheet"
 date: 2021-10-18
 favorite: "true"
-lastUpdate: 2021-11-13
+lastUpdate: 2022-08-16
 ---
+##### SSL certificate details
+
+```
+echo | openssl s_client -showcerts -servername www.baidu.com -connect www.baidu.com:443 2>/dev/null | openssl x509 -inform pem -noout -text |grep -E 'DNS:.*?, '| tr ", " "\n" |sort -u
+```
 
 ##### find subdomain by certfications
 
@@ -35,4 +40,5 @@ cat urls.txt | httpx -no-fallback -H "Cookie: rememberMe=123" -match-string "rem
 ##### wordlists
 
 https://wordlists.assetnote.io/
+
 
