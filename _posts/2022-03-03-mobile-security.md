@@ -15,6 +15,20 @@ You can configure the proxy on your Android device to point to 127.0.0.1:8080, c
 ```bash
 $ adb reverse tcp:8080 tcp:8080
 ```
+Forward the data received on port 27042 on the PC to port 443 on the Android
+```
+$ adb forward tcp:27042 tcp:443
+```
+
+```
+adb shell dumpsys activity top # 查看当前处于前台的Activity
+adb shell dumpsys package <package-name> # 查看包信息，包括四大组件信息以及MIME等相关信息
+adb shell dbinfo <package-name> # 用于查看App使用的数据库信息，包括执行操作的查询语 句等信息都会被打印出来
+adb shell screencap -p <path> # 截图并保存到<path>目录下
+adb shell pm命令 # pm命令是Android中packageManager的命令行，是用 于管理package的命令，比如通过pm list packages命令可以列出所 有安装的APK包名
+adb shell am命令 # am命令是一个重要的调试工具，主要用于启动或停止服 务、发送广播、启动Activity等。在逆向过程中，往往在需要以 Debug模式启动App时会使用这个命令
+adb shell am start-activity -D -N <包名>/<类名>
+```
 
 https://github.com/OWASP/owasp-mstg/blob/master/Document/0x05b-Basic-Security_Testing.md#client-isolation-in-wireless-networks
 
@@ -106,5 +120,12 @@ idevicesyslog # 查看控制台日志
 objection -d -g 1330  explore # frida 有时通过包名找不到进程，推荐使用pid
 ```
 
+#### 7. A step-by-step Android penetration testing guide for beginners
+https://www.hackthebox.com/blog/intro-to-mobile-pentesting
 
+#### 8. dynamic debugg
 
+```bash
+getprop ro.debuggable
+magisk resetprop  ro.debuggable 1
+````
