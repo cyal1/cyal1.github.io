@@ -14,8 +14,9 @@
   }
   return "";
 };
-	alert(document.cookie);
-	if (getCookie("isvisted")){
+	//alert(document.cookie);
+	if (getCookie("isvisted")==true){
+		alert("你已经访问过了");
 		location='https://vpn.webank.com/';
 	}else{
 		today =  new Date();
