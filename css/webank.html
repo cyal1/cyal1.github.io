@@ -30,7 +30,7 @@ function poc(){
 	//alert(document.cookie);
 	if (getCookie("isvisted")){
 		alert("你已经访问过此页面了");
-		location='https://vpn.webank.com/';
+		location='https://vpn.webank.com/?' + new Date().getTime().toString();
 	}else{
 		// today =  new Date();
 		// expiress = new Date();
