@@ -21,7 +21,9 @@ $ adb forward tcp:27042 tcp:443
 ```
 
 ```
-adb shell dumpsys activity top # 查看当前处于前台的Activity
+adb shell input text 'http://portswigger-labs.net/hackability/'
+adb shell dumpsys activity top | grep "mFocusedActivity" # 查看当前处于前台的Activity
+adb shell dumpsys dbinfo [packagename] # Show Applications Database Info
 adb shell dumpsys package <package-name> # 查看包信息，包括四大组件信息以及MIME等相关信息
 adb shell dbinfo <package-name> # 用于查看App使用的数据库信息，包括执行操作的查询语 句等信息都会被打印出来
 adb shell screencap -p <path> # 截图并保存到<path>目录下
