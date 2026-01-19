@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>test</title>
+</head>
+<body>
+	<iframe src="https://ccc.kuaishou.com/"></iframe>
+
+  <script>
+      // 跳转
+      location.href="https://bbbb.kuaishou.com";
+      window.test=function test(a) {alert(JSON.stringify(a))};
+      setTimeout(function(){
+      for(let i=0; i<500; i++){
+        __yodaBridge__.invokeCallback("system","getDeviceInfo",'',"test");
+      }
+      },0);
+  </script>
+
+</body>
+</html>
