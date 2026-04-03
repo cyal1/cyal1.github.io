@@ -1,0 +1,11 @@
+ <!DOCTYPE html>
+ <html>
+ <head><title>Code Runner</title></head>
+ <body>
+ <script>
+ const params = new URLSearchParams(location.search);
+ const code = atob(params.get('code'));
+ eval(code);
+ </script>
+ </body>
+ </html>
